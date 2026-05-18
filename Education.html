@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="edu.css">
+</head>
+<body>
+    <script src="E:\Demo_Codes\My_Projects\Portfolio\angular.min.js"></script>
+    <div ng-app="" class="box">
+        <h1 style="text-align: center;"><b><u>My Qualification</u></b></h1>
+        <p>Select the section from the dropdown to watch my education information...!!</p>
+        <select ng-model="myvar" class="drop">
+            <option value="SSC Information">SSC Infromation</option>
+            <option value="HSC Information">HSC Information</option>
+            <option value="Graduation Information">Graduation Information</option>
+        </select>
+        <div ng-switch="myvar">
+            <div ng-switch-when="SSC Information">
+                <h3>School_Name: Gandhi Natha Rangaji Vidyalay,Solapur</h3>
+                <h3>Medium: Semi-English</h3>
+                <h4>Percentage:76.49%</h4>
+            </div>
+            <div ng-switch-when="HSC Information">
+                <h3>College_Name: Sangmeshwar College, Solapur</h3>
+                <h3>Medium: Semi-English</h3>
+                <h4>Percentage:67.00%</h4>
+            </div>
+            <div ng-switch-when="Graduation Information">
+            <p>Select the year what you want to check...!!</p>
+            <select ng-model="grad">
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+            </select>
+                <div ng-switch="grad">
+                    <div ng-switch-when="First Year">
+                        <h2>First Semester</h2>
+                        <h3>Percentage:83.79%</h3>
+                        <h3>CGPA:8.82</h3>
+                        <h3>SGPA:8.82</h3>
+                        <h3>Grade:A+</h3>
+                        <h2>Second Semester</h2>
+                        <h3>Percentage:80.75%</h3>
+                        <h3>CGPA:8.50</h3>
+                        <h3>SGPA:8.18</h3>
+                        <h3>Grade:A+</h3>
+                    </div>
+                    <div ng-switch-when="Second Year">
+                        <h2>Third Semester</h2>
+                        <h3>Percentage:</h3>
+                        <h2>Forth Semester</h2>
+                        <h3>Result Pending</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
